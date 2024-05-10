@@ -1,0 +1,25 @@
+.page.games .category-logos {
+  background-image: url("../../assets/images/games-cat-bg.png");
+  background-size: cover;
+  position: relative;
+  z-index: 99;
+
+  .logo-grid {
+    min-height: 755px;
+
+    .logo-item {
+      text-align: center;
+
+      img {
+        max-width: 100%;
+      }
+
+      h5 {
+        font-family: 'saira', serif;
+        color: white;
+        max-width: 190px;
+        margin: 10px auto;
+      }
+    }
+  }
+}

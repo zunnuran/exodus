@@ -1,0 +1,135 @@
+.page.home {
+  .header {
+    .universe {
+      font-family: 'saira', 'serif';
+      position: relative;
+      font-size: 4rem;
+      color: white;
+      text-align: center;
+      display: inline-block;
+      line-height: 1;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+
+      &:after,
+      &:before {
+        position: absolute;
+        width: 45px;
+        height: 45px;
+        background-repeat: no-repeat;
+      }
+
+      &:after {
+        content: "";
+        bottom: -8px;
+        right: -25px;
+        background-image: url('../../assets/images/tagline2After.svg');
+        background-size: contain;
+      }
+
+      &:before {
+        content: "";
+        top: -8px;
+        left: -25px;
+        transform: rotate(180deg);
+        background-image: url('../../assets/images/tagline2After.svg');
+        background-size: contain;
+      }
+    }
+
+    .slides-box {
+      padding-left: 40px;
+      padding-right: 40px;
+
+      & > div {
+        justify-content: flex-end;
+        align-items: center;
+        display: flex;
+        height: 55px;
+
+        & p {
+          font-size: 15px;
+          display: inline-block;
+          text-align: right;
+          margin-right: 20px;
+        }
+
+        &:after {
+          content: "";
+          width: 6px;
+          height: 50px;
+          display: inline-block;
+          position: relative;
+          top: 0;
+          left: 0;
+          background: #FFF;
+          transform: skewY(-45deg);
+        }
+      }
+    }
+    .showOff-container {
+      background-image: linear-gradient(rgba(255,255,255, 0.1), rgba(255,255,255, 0), rgba(255,255,255,0.1));
+      box-shadow: 15px 25px 25px 0.72px rgba(0, 0, 0, 0.33);
+      height: 125px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-right-style: none;
+      border-left-style: none;
+      backdrop-filter: blur(10px);
+    }
+
+  }
+
+  @media screen and (max-width: 900px) {
+    .header {
+      .universe {
+        font-size: 3rem;
+
+        &:after, &:before {
+          width: 35px;
+          height: 35px;
+        }
+      }
+
+      .slides-box {
+        & > div {
+          height: 30px;
+
+          & p {
+            font-size: 12px;
+            display: inline-block;
+            margin-right: 10px;
+          }
+
+          &:after {
+            width: 3px;
+            height: 28px;
+          }
+        }
+      }
+
+      .showOff-container {
+        height: 70px;
+
+        & > div {
+          height: 70px;
+          img {
+            max-height: 35px;
+          }
+          p {
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .header {
+      .universe {
+        font-size: 2rem;
+        &:after, &:before {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+}

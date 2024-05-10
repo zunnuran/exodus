@@ -1,0 +1,77 @@
+.page.home .our-team {
+  & > div {
+    //height: 100% !important;
+    & > div {
+      //position: relative;
+    }
+  }
+
+  .slick-slider {
+    padding: 0 30px;
+  }
+
+  .slick-prev {
+    left: 0;
+    background-color: transparent;
+    background-image: url("../../assets/images/carousal-left.svg");
+    height: 47px;
+    width: 33px;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  .slick-next {
+    right: 0;
+    background-color: transparent;
+    background-image: url("../../assets/images/carousal-right.svg");
+    height: 47px;
+    width: 33px;
+
+    &:before {
+      content: none;
+    }
+  }
+
+  .slick-dots {
+    position: relative;
+
+    li {
+      width: auto;
+    }
+
+    button {
+      margin: 5px;
+      width: 70px;
+      background: rgba(255, 255, 255, 0.4);
+      height: 7px;
+      padding: 0;
+      border-radius: 4px;
+      &:before {
+        content: none;
+      }
+    }
+
+    li.slick-active button {
+      background: rgb(255, 255, 255);
+    }
+  }
+
+  @media screen and (max-width: 899px) {
+    & {
+      .slick-dots {
+        position: relative;
+
+        li {
+          width: auto;
+        }
+
+        button {
+          width: 50px;
+          height: 5px;
+        }
+      }
+    }
+  }
+}

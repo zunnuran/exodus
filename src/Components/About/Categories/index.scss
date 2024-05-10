@@ -1,0 +1,18 @@
+.page.about .categories {
+  //background-image: url("../../../assets/images/section2-3-background.png");
+  background-position: top center;
+  background-size: cover;
+  background-color: #1e1e1e;
+  position: relative;
+  min-height: 1550px;
+  overflow: hidden;
+  .moons {
+    min-height: 1550px;
+    width: 100%;
+    position: absolute;
+    background-position: bottom center;
+    background-image: url("../../../assets/images/moons.png");
+    background-size: cover;
+    z-index: 999;
+  }
+}

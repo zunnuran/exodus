@@ -1,0 +1,33 @@
+.category-logos {
+  padding: 0 45px;
+
+  .logo-grid {
+    min-height: 755px;
+
+    .logo-item {
+      text-align: center;
+
+      img {
+        max-width: 100%;
+      }
+
+      h5 {
+        font-family: 'saira', serif;
+        color: white;
+        max-width: 190px;
+        margin: 10px auto;
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    h5 {
+      font-size: 1.2rem;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    h5 {
+      font-size: 1rem;
+    }
+  }
+}

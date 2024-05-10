@@ -1,0 +1,46 @@
+.page.nft {
+  .bonus {
+    .bonus-box {
+      padding-left: 65px;
+      padding-right: 65px;
+      & > div {
+        width: 600px;
+        min-height: 320px;
+        background-image: url('../../assets/images/bonus-box-bg.png');
+        background-size: 100% 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 200px;
+        padding-left: 72px;
+        position: relative;
+      }
+    }
+    .text {
+      font-family: "saira", "serif";
+      text-align: left;
+      font-weight: 500;
+      margin-bottom: 20px;
+      display: inline-block;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .bonus {
+      .bonus-box {
+        padding-left: 45px;
+        padding-right: 45px;
+        & > div {
+          width: 450px;
+          min-height: 270px;
+          padding-left: 40px;
+        }
+      }
+
+      .text {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

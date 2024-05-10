@@ -1,0 +1,127 @@
+.header {
+  box-shadow: 0 24px 28px 3px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 999;
+}
+.page {
+  text-align: center;
+  padding-bottom: 130px;
+  background-color: #1E1E1E;
+}
+.heading {
+  font-family: mechsuit, serif !important;
+  font-size: 55px !important;
+  line-height: 1 !important;
+}
+.subheading {
+  font-family: saira, serif !important;
+  font-size: 60px !important;
+  color: white;
+  letter-spacing: 10px !important;
+  text-align: center;
+  line-height: 1 !important;
+}
+.subheading2 {
+  font-family: saira, serif !important;
+  font-size: 40px !important;
+  color: white;
+  letter-spacing: 1px !important;
+  line-height: 1 !important;
+  text-align: left;
+}
+.paragraph {
+  font-family: 'bankGothicBTMedium', 'serif' !important;
+  font-size: 24px !important;
+  max-width: 905px;
+  text-align: center;
+  margin: auto !important;
+  line-height: 1 !important;
+}
+.section-margin {
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.section-padding {
+  padding-left: 45px;
+  padding-right: 45px;
+}
+.e-button {
+  border-color: #8f8f8f;
+  color: white;
+  font-family: sairaCondensed, serif;
+  font-size: 2em;
+  min-width: 233px;
+  line-height: 1;
+  padding: 5px;
+  background: rgba(27, 27, 27, 0.4)
+}
+section {
+  max-width: 100vw;
+}
+.text-logos {
+  font-family: mechsuit, serif !important;
+  font-size: 80px !important;
+  -webkit-text-stroke: 3px #39b7ff;
+  color: rgba(57, 183, 255, 0.3);
+  text-shadow: 0 0 100px #39b7ff;
+}
+.button {
+  border-color: #8f8f8f !important;
+  color: white !important;
+  font-family: 'sairaCondensed', 'serif' !important;
+  font-size: 2em !important;
+  min-width: 233px !important;
+  line-height: 1 !important;
+  padding: 5px !important;
+  background: rgba(27, 27, 27, 0.4);
+}
+
+.text-field {
+  & label {
+    color: #8f8f8f !important;
+    background-color: black;
+  }
+
+  & div {
+    background-color: black;
+  }
+
+  & input {
+    height: 18px;
+    color: #8f8f8f;
+    background-color: black;
+    border-radius: 3px;
+  }
+
+  & fieldset {
+    border-color: #8f8f8f !important;
+  }
+
+  width: 690px;
+  max-width: 90vw;
+}
+
+@media screen and (max-width: 1366px) {
+  .heading {
+    font-size: 45px !important;
+  }
+  .subheading {
+    font-size: 45px !important;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .heading {
+    font-size: 35px !important;
+  }
+  .subheading {
+    font-size: 35px !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  .heading {
+    font-size: 30px !important;
+  }
+  .subheading {
+    font-size: 30px !important;
+  }
+}

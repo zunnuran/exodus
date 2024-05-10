@@ -1,0 +1,42 @@
+.page.nft .slides {
+  > div {
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+    height: 55px;
+
+    & p {
+      display: inline-block;
+      text-align: right;
+      margin-right: 25px;
+    }
+
+    &:after {
+      content: "";
+      width: 6px;
+      height: 50px;
+      display: inline-block;
+      position: relative;
+      top: 0;
+      left: calc(-50% + 3px);
+      background: #FFF;
+      transform: skewY(-45deg)
+    }
+  }
+  
+  @media screen and (max-width: 1024px) {
+    & > div {
+      height: 45px;
+      &:after {
+        width: 4px;
+        height: 40px;
+        display: inline-block;
+        position: relative;
+        top: 0;
+      }
+    }
+    img {
+      max-width: 20px;
+    }
+  }
+}

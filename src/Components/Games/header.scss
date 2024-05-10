@@ -1,0 +1,83 @@
+.page.games {
+  .header {
+    & > div {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-top: 70px;
+    }
+
+    .header-image, .content {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    .trophies {
+      .title {
+        font-family: bankGothicBTMedium, serif;
+        font-size: 40px;
+      }
+
+      .year {
+        font-family: bankGothicBTMedium, serif;
+        font-size: 30px;
+      }
+
+      .detail {
+        text-transform: uppercase;
+        font-family: saira, serif;
+        font-size: 20px
+      }
+    }
+
+    .showOff-container {
+      padding-top: 0;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url('../../assets/images/showoff-bg.png');
+      box-shadow: 15px 25px 25px 0.72px rgba(0, 0, 0, 0.33);
+      height: 125px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-right-style: none;
+      border-left-style: none;
+      backdrop-filter: blur(10px);
+    }
+    & > div {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-top: 70px;
+    }
+
+  }
+  @media screen and (max-width: 1280px) {
+
+    .trophies {
+      .title {
+        font-size: 30px !important;
+      }
+
+      .year {
+        font-size: 25px !important;
+      }
+
+      .detail {
+        font-size: 15px !important
+      }
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .showOff-container {
+      height: 70px !important;
+
+      & > div {
+        height: 70px !important;
+        img {
+          max-height: 35px !important;
+        }
+        p {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'abnes';
+  src: url(./assets/fonts/abnes.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'bankGothicBTMedium';
+  src: url(./assets/fonts/BankGothicMediumBT.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'saira';
+  src: url(./assets/fonts/Saira-VariableFont_wdth,wght.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'sairaCondensed';
+  src: url(./assets/fonts/SairaCondensed-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'lemonmilkBold';
+  src: url(./assets/fonts/LEMONMILK-Bold.otf) format('opentype');
+}
+@font-face {
+  font-family: 'mechsuit';
+  src: url(./assets/fonts/Mechsuit.otf) format('opentype');
+}
+@font-face {
+  font-family: 'bebasNeue';
+  src: url(./assets/fonts/BebasNeue Regular.ttf) format('truetype');
+}
+
+body {
+  margin: 0;
+  font-family: saira, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}

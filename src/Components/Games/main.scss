@@ -1,0 +1,95 @@
+.page.games .overview {
+    background-image: url("../../assets/images/games-main-bg.png");
+    background-position: bottom center;
+  margin-top: -30px;
+  background-size: cover;
+
+  .main {
+    padding-top: 130px;
+    min-height: 900px;
+
+    .overview-box {
+      .text-box, .image-box {
+        height: 380px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .text-box {
+        background-size: 100% 100%;
+        padding: 0 35px;
+        & > p {
+          font-family: saira, serif;
+          font-size: 35px;
+          text-align: left;
+        }
+      }
+      .image-box {
+
+      }
+    }
+  }
+
+  .bars {
+    background-image: url("../../assets/images/game-bars.png");
+    height: 100px;
+  }
+
+  .characters {
+    .character-boxes {
+      display: flex;
+
+      .character {
+        height: 460px;
+        width: 100%;
+        margin: 15px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        position: relative;
+
+        img {
+          position: absolute;
+
+          &.tl {
+            top: -4px;
+            left: -4px;
+            transform: rotate(-90deg);
+          }
+          &.tr {
+            top: -4px;
+            right: -4px
+          }
+          &.bl {
+            bottom: -4px;
+            left: -4px;
+            transform: rotate(180deg)
+          }
+          &.br {
+            bottom: -4px;
+            right: -4px;
+            transform: rotate(90deg)
+          }
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    .text-box {
+      height: 300px !important;
+      & > p{
+        font-size: 30px !important;
+      }
+    }
+    .image-box {
+      height: 300px !important;
+      img {
+        max-height: 90%;
+        max-width: 90%;
+      }
+    }
+  }
+}

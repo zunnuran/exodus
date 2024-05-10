@@ -1,0 +1,57 @@
+.page.home {
+  .our-partners {
+    //padding: 0 45px;
+    background: url('../../../assets/images/partners-back.svg');
+
+    & > div {
+      align-items: center;
+      min-height: 755px;
+      padding: 0 45px;
+
+      .partners-heading {
+        text-align: left;
+        background-image: url('../../../assets/images/games-background.png');
+        background-position: bottom left;
+        background-repeat: no-repeat;
+        margin-bottom: 50px;
+      }
+      & h5 {
+        font-family: 'saira', 'serif';
+        color: white;
+        max-width: 190px;
+        margin: 10px auto;
+      }
+    }
+
+    .partner-box {
+      & > div {
+        display: grid;
+        place-items: center;
+        width: 256px;
+        height: 160px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        margin: auto auto 15px;
+        padding-bottom: 10px;
+
+        & > div {
+          display: grid;
+          place-items: center;
+          height: 160px;
+        }
+
+        .partner-box-number {
+          position: absolute;
+          bottom: 20px;
+          height: auto;
+          left: 0
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+  }
+}

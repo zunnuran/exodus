@@ -1,0 +1,24 @@
+.newsletter {
+  background-image: url('../../assets/images/newsletter-background.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  margin-bottom: -20px;
+  .content {
+    min-height: 745px;
+    padding: 0 40px;
+
+    .title {
+      font-family: 'saira', 'serif';
+      font-size: 60px;
+      color: white;
+      letter-spacing: 10px;
+      text-align: center;
+    }
+
+    .subtitle {
+      font-family: 'mechsuit', 'serif';
+      font-size: 55px;
+    }
+  }
+}
