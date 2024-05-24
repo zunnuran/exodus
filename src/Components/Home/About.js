@@ -1,21 +1,14 @@
 import { Grid, Typography } from '@mui/material';
 import exAbout from '../../assets/images/exodus-about.png';
 import * as React from 'react';
-import './about.scss'
+import './about.scss';
+
 export default function About() {
   return (
     <section className="about">
-      <Grid
-        container
-        justifyContent="center"
-        alignItems="center"
-        spacing={0}
-      >
+      <Grid container justifyContent="center" alignItems="center" spacing={0}>
         <Grid item md={12}>
-          <Typography
-            variant="h3"
-            className="subheading"
-          >
+          <Typography variant="h3" className="subheading">
             ABOUT
           </Typography>
           <img src={exAbout} alt="" style={{ margin: '15px' }} />

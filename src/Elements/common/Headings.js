@@ -7,7 +7,7 @@ import './headings.scss';
 
 const Headings = function ({ subheading, heading, arrows }) {
   return (
-    <Grid xs={12} className="headings">
+    <Grid item xs={12} className="headings">
       {subheading ? <Typography className="subheading">{subheading}</Typography> : null}
       <Grid className="heading-container">
         {arrows ? (
@@ -20,7 +20,7 @@ const Headings = function ({ subheading, heading, arrows }) {
         </div>
         {arrows ? (
           <div className="arrow">
-            <img src={chevronsRight} alt=""/>
+            <img src={chevronsRight} alt="" />
           </div>
         ) : null}
       </Grid>

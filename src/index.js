@@ -8,6 +8,21 @@ import './index.css';
 const theme = createTheme();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+window.addEventListener('scroll', function () {
+  let elements = document.getElementsByClassName('animated');
+  console.log(elements);
+  Array.from(elements).map((elem) => {
+    let position = elem.getBoundingClientRect();
+
+    if (position.top < window.innerHeight - 100 && !elem.classList.contains('visible')) {
+      setTimeout(() => {
+        elem.classList.add('visible');
+      }, 200);
+    }
+  });
+});
+
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>

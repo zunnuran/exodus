@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { Grid, Typography } from '@mui/material';
-import './nftList.scss';
+import { Box, Grid, Typography } from '@mui/material';
+import { fadeInLeft, fadeInRight } from '../../utils';
+import Corners from '../../Elements/common/Corners';
 import chevronsLeft from '../../assets/images/chevronsLeft.svg';
 import chevronsRight from '../../assets/images/chevronsRight.svg';
 import cutEdgeBg from '../../assets/images/cut-edge-bl.svg';
@@ -15,6 +16,7 @@ import nft6 from '../../assets/images/nft-6.png';
 import nft7 from '../../assets/images/nft-7.png';
 import nft8 from '../../assets/images/nft-8.png';
 import Slides from '../Common/Slides';
+import './nftList.scss';
 
 export function NftList() {
   const nfts = [nft1, nft2, nft3, nft4, nft5, nft6, nft7, nft8];
@@ -44,15 +46,38 @@ export function NftList() {
         position="relative"
       >
         {nfts.map((n, i) => (
-          <Grid key={`nft-${i}`} md={6} sm={12} xs={12} className="nft-list-images">
-            <div style={{ position: 'relative' }}>
+          <Grid
+            key={`nft-${i}`}
+            md={6}
+            sm={12}
+            xs={12}
+            className="nft-list-images animated"
+            sx={{
+              '&.animated.visible': {
+                animation: `${i % 2 === 0 ? fadeInLeft : fadeInRight} 1s ease-in`
+              }
+            }}
+          >
+            <Box
+              sx={{
+                position: 'relative',
+                '& .tl': { top: '16px !important', left: '16px !important' },
+                '& .tr': { top: '16px !important', right: '16px !important' },
+                '& .bl': { bottom: '24px !important', left: '16px !important' },
+                '& .br': { bottom: '24px !important', right: '16px !important' }
+              }}
+              className="corners"
+            >
+              <Corners
+                {...(() => ((i + 1) % 2 === 0 ? { tl: true, br: true } : { tr: true, bl: true }))()}
+              />
               <img
                 src={(i + 1) % 2 === 0 ? cutEdgeBg : cutEdgeBgBr}
                 className="cut-edge-bg"
                 alt="cut edge background"
               />
               <img src={n} className="cut-edge-img" alt="Main image" />
-            </div>
+            </Box>
           </Grid>
         ))}
         <Grid sx={{ position: 'absolute', right: '-30px', top: '50%' }}>

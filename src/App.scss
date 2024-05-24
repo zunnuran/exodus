@@ -5,7 +5,6 @@
 }
 .page {
   text-align: center;
-  padding-bottom: 130px;
   background-color: #1E1E1E;
 }
 .heading {
@@ -45,16 +44,6 @@
   padding-left: 45px;
   padding-right: 45px;
 }
-.e-button {
-  border-color: #8f8f8f;
-  color: white;
-  font-family: sairaCondensed, serif;
-  font-size: 2em;
-  min-width: 233px;
-  line-height: 1;
-  padding: 5px;
-  background: rgba(27, 27, 27, 0.4)
-}
 section {
   max-width: 100vw;
 }
@@ -65,40 +54,62 @@ section {
   color: rgba(57, 183, 255, 0.3);
   text-shadow: 0 0 100px #39b7ff;
 }
-.button {
-  border-color: #8f8f8f !important;
-  color: white !important;
-  font-family: 'sairaCondensed', 'serif' !important;
-  font-size: 2em !important;
-  min-width: 233px !important;
-  line-height: 1 !important;
-  padding: 5px !important;
-  background: rgba(27, 27, 27, 0.4);
-}
 
 .text-field {
+  position: relative;
+  width: 690px;
+  max-width: 90vw;
+  -webkit-clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px) !important;
+  clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
+  &:before, &:after {
+    position: absolute;
+    z-index: 9;
+    height: 14px;
+    width: 14px;
+    background-color: transparent;
+    //border: inherit;
+    border: 1px solid #8f8f8f;
+    box-sizing: border-box;
+    transform: scale(1.41) rotate(45deg);
+    content: "";
+  } &:before {
+    top: -6px;
+    left: -7px;
+  } &:after {
+    bottom: -6px;
+    right: -7px;
+  }
   & label {
     color: #8f8f8f !important;
     background-color: black;
+    //padding: 10px;
+    left: 5px;
   }
 
   & div {
     background-color: black;
   }
-
   & input {
     height: 18px;
     color: #8f8f8f;
     background-color: black;
-    border-radius: 3px;
+    border-radius: 0;
+    border: 1px solid #8f8f8f;
+    position: relative;
   }
-
+  & input::-ms-input-placeholder, & input::placeholder {
+    color: #8f8f8f !important;
+  }
   & fieldset {
-    border-color: #8f8f8f !important;
+    border: none !important;
   }
+}
 
-  width: 690px;
-  max-width: 90vw;
+.animated {
+  visibility: hidden;
+}
+.animated.visible {
+  visibility: visible !important;
 }
 
 @media screen and (max-width: 1366px) {

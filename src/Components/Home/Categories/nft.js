@@ -7,7 +7,12 @@ import gameplayLogo from '../../../assets/images/gameplay-logo.png';
 import metaverseLogo from '../../../assets/images/metaverse-logo.png';
 import nftsLogo from '../../../assets/images/nfts-logo.png';
 import glowLight from '../../../assets/images/glowLight.png';
+import { fadeInUp } from 'react-animations';
+import { keyframes } from '@emotion/react';
 import './nft.scss';
+
+// const bouncein = keyframes`${bounceInUp}`
+const fadein = keyframes`${fadeInUp}`;
 
 function Nft() {
   return (
@@ -17,48 +22,61 @@ function Nft() {
         justifyContent="center"
         spacing={0}
         className="nft-row"
+        sx={{
+          boxShadow: '0 0 40px #000',
+          '& img.animated.visible': {
+            animation: `${fadein} 2s`
+          }
+        }}
       >
-        <Grid item sm={4} sx={{}}>
+        <Grid item sm sx={{}}>
           <Grid
             className="nft-box"
             sx={{
               background: `url(${gamePlayBG})`,
               '&:after': {
                 content: '""',
-                backgroundImage: `url(${glowLight})`,
+                backgroundImage: `url(${glowLight})`
               }
             }}
           >
-            <img src={gameplayLogo} alt="gameplay Logo" style={{ transform: 'skew(10deg)' }} />
+            <img
+              className="animated"
+              src={gameplayLogo}
+              alt="gameplay Logo"
+              style={{ transform: 'skew(10deg)' }}
+            />
           </Grid>
         </Grid>
-        <Grid item sm={4} sx={{}}>
+        <Grid item sm sx={{}}>
           <Grid
             className="nft-box"
             sx={{
               background: `url(${metaverseBG})`,
               '&:before': {
-                content: '""',
-                backgroundImage: `url(${glowLight})`,
+                backgroundImage: `url(${glowLight})`
               }
             }}
           >
-            <img src={metaverseLogo} alt="metaverse Logo" style={{ transform: 'skew(10deg)' }} />
+            <img
+              className="animated"
+              src={metaverseLogo}
+              alt="metaverse Logo"
+              style={{ transform: 'skew(10deg)' }}
+            />
           </Grid>
         </Grid>
-        <Grid item sm={4} sx={{}}>
+        <Grid item sm sx={{}}>
           <Grid
-            className="nft-box"
+            className="nft-box last"
             sx={{
               background: `url(${nftsBG})`,
               '&:after': {
-                content: '""',
-                backgroundImage: `url(${glowLight})`,
-                right: '-335px',
+                backgroundImage: `url(${glowLight})`
               }
             }}
           >
-            <img src={nftsLogo} alt="nfts Logo" />
+            <img className="animated" src={nftsLogo} alt="nfts Logo" />
           </Grid>
         </Grid>
       </Grid>

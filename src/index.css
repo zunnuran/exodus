@@ -27,6 +27,9 @@
   src: url(./assets/fonts/BebasNeue Regular.ttf) format('truetype');
 }
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   font-family: saira, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',

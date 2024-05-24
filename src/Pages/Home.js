@@ -10,7 +10,7 @@ import Footer from '../Components/Common/Footer';
 
 function Home() {
   return (
-    <div className="page home">
+    <div className="page home" style={{ backgroundColor: 'transparent' }}>
       <Header />
       <Categories />
       <Team />

@@ -7,6 +7,11 @@
 
       & > div {
         transform: translateX(30px);
+        transition: flex 1s;
+        &:hover {
+          flex: 40%;
+          transition: flex 1s;
+        }
       }
 
       .nft-box {
@@ -19,30 +24,38 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: transform 1s;
 
         img {
           transform: skew(10deg);
+          transition: transform 1s;
           max-width: 60%;
         }
 
-        &:after {
-          background-position: center;
+        &.last:after, &:before, &:after {
+          content: '';
           display: block;
           position: absolute;
-          top: -300px;
-          right: -340px;
-          width: 680px;
           height: 1300px;
+          top: -300px;
+        }
+        &.last:after {
+          background-position: center left;
+          right: -333px;
+          width: 680px;
+        }
+        &:after {
+          background-position: center left;
+          top: -300px;
+          right: 0;
+          width: 340px;
         }
 
         &:before {
-          background-position: center;
-          display: block;
-          position: absolute;
+          background-position: center right;
           top: -300px;
-          left: -343px;
-          width: 680px;
-          height: 1300px
+          left: 0;
+          width: 333px;
         }
       }
 

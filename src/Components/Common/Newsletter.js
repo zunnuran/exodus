@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { Box, Button, Grid, TextField, Typography } from '@mui/material';
+import { Box, Grid, TextField, Typography } from '@mui/material';
 import './newsletter.scss';
+import Button from '../../Elements/common/Button';
 
 export function Newsletter() {
   return (
@@ -13,9 +14,9 @@ export function Newsletter() {
           </Grid>
           <Box sx={{ mb: 3 }}>
             <TextField
+              placeholder="e-mail"
               className="text-field"
               id="outlined-basic"
-              label="e-mail"
               variant="outlined"
             />
           </Box>

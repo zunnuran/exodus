@@ -8,7 +8,7 @@ import Footer from '../Components/Common/Footer';
 
 function Home() {
   return (
-    <div className="page games" style={{ paddingBottom: '130px', backgroundColor: '#1E1E1E' }}>
+    <div className="page games">
       <Header />
       <Logos />
       <Main />

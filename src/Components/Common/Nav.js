@@ -1,7 +1,7 @@
 import * as React from 'react';
-import {Box, Button, Grid, Menu, MenuItem, Toolbar} from '@mui/material';
+import { Box, Button, Grid, Menu, MenuItem, Toolbar } from '@mui/material';
 import PropTypes from 'prop-types';
-import {Fragment} from "react";
+import { Fragment } from 'react';
 import mobileNavBg from '../../assets/images/mobile-nav-back.svg';
 import mobileNavBars from '../../assets/images/nav-bars.svg';
 import { useNavigate } from 'react-router-dom';
@@ -13,9 +13,10 @@ function Nav(props) {
   const navItems = [
     { text: 'HOME', link: '/' },
     { text: 'NFT', link: '/nft' },
-    { text: 'PORTFOLIO', link: '#' },
+    { text: 'GAMES', link: '/games' },
+    { text: 'ABOUT', link: '/about' },
     { text: 'WHITE PAPER', link: '#' },
-    { text: 'NEWS', link: '#'}
+    { text: 'NEWS', link: '#' }
   ];
 
   const navigate = useNavigate();
@@ -28,11 +29,10 @@ function Nav(props) {
     setAnchorEl(null);
   };
 
-
   return (
     <Fragment>
-      <Grid item lg={10} md={10} sx={{display: {xs: 'none', sm: 'block'}}} className="navbar">
-        <Grid component="nav" sx={{textAlign: 'center', fontFamily: 'bankGothicBTMedium', ...sx}}>
+      <Grid item lg={10} md={10} className="navbar desktop-nav" sx={{ pt: 0 }}>
+        <Grid component="nav" sx={{ textAlign: 'center', fontFamily: 'bankGothicBTMedium', ...sx }}>
           <Toolbar>
             <Box
               display="flex"
@@ -41,7 +41,11 @@ function Nav(props) {
               className="items-container"
             >
               {navItems.map((item) => (
-                <Button key={item.text} onClick={() => navigate(item.link)} className={selected === item.text ? 'selected item' : 'item'}>
+                <Button
+                  key={item.text}
+                  onClick={() => navigate(item.link)}
+                  className={selected === item.text ? 'selected item' : 'item'}
+                >
                   {item.text}
                 </Button>
               ))}
@@ -49,38 +53,44 @@ function Nav(props) {
           </Toolbar>
         </Grid>
       </Grid>
-      <Grid item xs={12}  sx={{display: {xs: 'block', sm: 'none'}}} className="navbar mobile-nav">
+      <Grid item xs={12} className="navbar mobile-nav">
         <Grid component="nav">
-        <Button
-          id="basic-button"
-          aria-controls={open ? 'basic-menu' : undefined}
-          aria-haspopup="true"
-          aria-expanded={open ? 'true' : undefined}
-          onClick={handleClick}
-          sx={{
-            backgroundImage: `url(${mobileNavBg})`,
-            width: '100px',
-            height: '70px'
-          }}
-        >
-          <img src={mobileNavBars} alt=""/>
-        </Button>
-        <Menu
-          id="basic-menu"
-          anchorEl={anchorEl}
-          open={open}
-          onClose={handleClose}
-          MenuListProps={{
-            'aria-labelledby': 'basic-button',
-          }}
-          sx={{
-            width: '90% '
-          }}
-        >
-          {navItems.map((item) => (
-            <MenuItem key={item.text} onClick={handleClose}>{item.text}</MenuItem>
+          <Button
+            id="basic-button"
+            aria-controls={open ? 'basic-menu' : undefined}
+            aria-haspopup="true"
+            aria-expanded={open ? 'true' : undefined}
+            onClick={handleClick}
+            sx={{
+              backgroundImage: `url(${mobileNavBg})`,
+              width: '80px',
+              height: '50px',
+              borderRadius: '0'
+            }}
+          >
+            <img src={mobileNavBars} style={{ width: '30px', marginLeft: '16px' }} alt="" />
+          </Button>
+          <Menu
+            id="basic-menu"
+            anchorEl={anchorEl}
+            open={open}
+            onClose={handleClose}
+            MenuListProps={{
+              'aria-labelledby': 'basic-button'
+            }}
+            sx={{
+              width: '90% ',
+              '& li': {
+                fontFamily: 'saira, serif'
+              }
+            }}
+          >
+            {navItems.map((item) => (
+              <MenuItem key={item.text} onClick={handleClose}>
+                {item.text}
+              </MenuItem>
             ))}
-        </Menu>
+          </Menu>
         </Grid>
       </Grid>
     </Fragment>

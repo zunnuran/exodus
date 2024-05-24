@@ -1,5 +1,14 @@
 .page.home {
   .header {
+    .home-exodus {
+      font-size: 100px;
+      font-family: abnes, serif;
+      text-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
+      -webkit-text-stroke: 1px #FFFFFF;
+      background: -webkit-linear-gradient(#FFF, #FFF, transparent, transparent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
     .universe {
       font-family: 'saira', 'serif';
       position: relative;
@@ -36,36 +45,6 @@
       }
     }
 
-    .slides-box {
-      padding-left: 40px;
-      padding-right: 40px;
-
-      & > div {
-        justify-content: flex-end;
-        align-items: center;
-        display: flex;
-        height: 55px;
-
-        & p {
-          font-size: 15px;
-          display: inline-block;
-          text-align: right;
-          margin-right: 20px;
-        }
-
-        &:after {
-          content: "";
-          width: 6px;
-          height: 50px;
-          display: inline-block;
-          position: relative;
-          top: 0;
-          left: 0;
-          background: #FFF;
-          transform: skewY(-45deg);
-        }
-      }
-    }
     .showOff-container {
       background-image: linear-gradient(rgba(255,255,255, 0.1), rgba(255,255,255, 0), rgba(255,255,255,0.1));
       box-shadow: 15px 25px 25px 0.72px rgba(0, 0, 0, 0.33);
@@ -74,54 +53,36 @@
       border-right-style: none;
       border-left-style: none;
       backdrop-filter: blur(10px);
+      max-width: 100vw;
+      overflow: hidden;
     }
 
   }
-
+  @media screen and (max-width: 1100px) {
+    .header {
+      .home-exodus {
+        font-size: 70px;
+      }
+    }
+  }
   @media screen and (max-width: 900px) {
     .header {
+      .home-exodus {
+        font-size: 50px;
+      }
       .universe {
-        font-size: 3rem;
-
+        font-size: 2.5rem;
         &:after, &:before {
-          width: 35px;
-          height: 35px;
-        }
-      }
-
-      .slides-box {
-        & > div {
+          width: 30px;
           height: 30px;
-
-          & p {
-            font-size: 12px;
-            display: inline-block;
-            margin-right: 10px;
-          }
-
-          &:after {
-            width: 3px;
-            height: 28px;
-          }
-        }
-      }
-
-      .showOff-container {
-        height: 70px;
-
-        & > div {
-          height: 70px;
-          img {
-            max-height: 35px;
-          }
-          p {
-            font-size: 3rem;
-          }
         }
       }
     }
   }
   @media screen and (max-width: 600px) {
+    .home-exodus {
+      font-size: 40px;
+    }
     .header {
       .universe {
         font-size: 2rem;

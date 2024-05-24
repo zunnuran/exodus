@@ -6,7 +6,7 @@ nav {
     height: 70px;
     background-color: rgba(0, 34, 58, 0.6);
     position: relative;
-    padding: 0 60px;
+    padding: 0 20px;
 
     &:after, &:before {
       content: "";
@@ -36,6 +36,7 @@ nav {
       &:hover {
         background-color: rgba(166, 225, 255, 0.2);
         border-radius: 0;
+        transition: background-color 1s
       }
 
       &.selected:before, &.selected:after {
@@ -89,10 +90,20 @@ nav {
       }
     }
   }
+
+  @media screen and (max-width: 768px) {
+    .items-container {
+      button {
+        font-size: 0.7rem;
+      }
+    }
+  }
+
 }
 .mobile-nav {
   text-align: right;
   padding-right: 50px;
+  display: none;
 }
 
 
@@ -104,3 +115,14 @@ nav {
   background-color: rgba(0, 0, 0, 0.6) !important;
   color: white !important;
 }
+
+@media screen and (max-width: 650px) {
+  //.items-container {
+  .mobile-nav {
+    display: block !important;
+  }
+  .desktop-nav {
+    display: none !important;
+  }
+}
+//}

@@ -8,7 +8,7 @@ import './App.scss';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/exodus">
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/about" element={<About />} />

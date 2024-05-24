@@ -1,50 +1,72 @@
 .page.home {
   .games {
-    //position: relative;
-    //z-index: 999999;
+    background-color: #1e1e1e;
     margin-top: -55px;
     padding-top: 55px;
     overflow: hidden;
 
-    //background-color: #181818;
     background-image: url('../../assets/images/games-background.png');
     background-position: top right;
     background-repeat: no-repeat;
 
     .heading-container {
       padding: 0 40px;
-      //position: relative;
     }
 
     .slick-list {
       width: 110%;
+      padding-top: 30px;
+      padding-bottom: 30px;
     }
     .slick-arrow {
       display: none !important;
     }
 
-    .slider-container {
+      .slider-container {
       padding: 0 40px;
-      //width: 110%;
-      //overflow: hidden;
+        .game:hover {
+          .text-box {
+            background-color: rgba(180,180,180, 0.3);
+            width: 240px;
+            min-height: 120px;
+            //height: auto;
+            p {
+              margin: 5px 0
+            }
+            .game-title {
+              font-size: 1.5em;
+              line-height: 1;
+            }
+          }
+        }
       .game {
         min-height: 660px;
         background-size: cover;
         position: relative;
         width: calc(100% - 36px) !important;
-        //display: inline-block;
-        //margin: 0 18px;
 
         .text-box {
           text-align: left;
-          min-height: 130px;
-          width: 240px;
+          width: 0;
+          height: 0;
+          overflow: hidden;
+          min-height: 0;
           backdrop-filter: blur(10px);
-          background-color: rgba(180,180,180, 0.3);
+          //background-color: rgba(180,180,180, 0.3);
           position: absolute;
           bottom: 30px;
           left: 30px;
-          border: 1px solid #a2a2a2;
+          transition: width 0.5s ease, min-height 0.5s ease, height 0.5s ease, background-color 1s ease;
+          text-wrap: nowrap;
+          &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            height: 100%;
+            width: 2px;
+            background-color: #F7F7F7;
+          }
           & > div {
             margin: 30px 25px;
           }

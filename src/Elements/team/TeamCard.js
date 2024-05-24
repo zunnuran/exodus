@@ -10,17 +10,14 @@ const TeamCard = ({ image, heading, tagline }) => {
         <Box
           className="team-image"
           sx={{
-            backgroundImage: `url(${image})`,
+            backgroundImage: `url(${image})`
           }}
         ></Box>
         <div style={{ marginLeft: '15px' }}>
-          <Typography
-            variant="h3" className="team-title">
+          <Typography variant="h3" className="team-title">
             {heading}
           </Typography>
-          <Typography className="tagline">
-            {tagline}
-          </Typography>
+          <Typography className="tagline">{tagline}</Typography>
         </div>
       </Box>
     </Grid>

@@ -1,6 +1,5 @@
 .page.home {
   .our-partners {
-    //padding: 0 45px;
     background: url('../../../assets/images/partners-back.svg');
 
     & > div {
@@ -24,6 +23,18 @@
     }
 
     .partner-box {
+      position: relative;
+      transition: transform 0.5s ease;
+      & > div:after {
+        content: "";
+        width: 4px;
+        height: 4px;
+        border-radius: 2px;
+        position: absolute;
+        top: 48%;
+        left: 49%;
+        transition: box-shadow 0.5s ease;
+      }
       & > div {
         display: grid;
         place-items: center;
@@ -47,6 +58,26 @@
           bottom: 20px;
           height: auto;
           left: 0
+        }
+        p {
+          float: left;
+          font-family: saira;
+          font-size: 1.5em;
+          margin-left: 18px;
+          transition: color 0.5s ease;
+        }
+      }
+      &:hover {
+        transform: scale(1.05);
+        transition: transform 0.5s ease;
+        p {
+          color: rgb(7, 138, 212) !important;
+          transition: color 0.5s ease;
+        }
+
+        & > div:after {
+          box-shadow: 0 0 50px 30px #03a2fe;
+          transition: box-shadow 0.5s ease;
         }
       }
     }

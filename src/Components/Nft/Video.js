@@ -5,6 +5,7 @@ import vidFram from '../../assets/images/nft-vid.png';
 import vidImage from '../../assets/images/nft-vid-image.png';
 import bars from '../../assets/images/repeating-bars.png';
 import './video.scss';
+import Corners from '../../Elements/common/Corners';
 
 function Video() {
   return (
@@ -20,7 +21,6 @@ function Video() {
           url(${gamesBg}) no-repeat bottom left`,
           minHeight: '1070px',
           position: 'relative'
-          // backgroundSize: 'contain',
         }}
       >
         <Grid md={12} sx={{ height: '70px', backgroundImage: `url(${bars})` }} />
@@ -35,8 +35,21 @@ function Video() {
               marginBottom: '25px',
               maxWidth: '85%',
               margin: 'auto',
+              position: 'relative'
             }}
           >
+            <div
+              style={{
+                position: 'absolute',
+                top: '25px',
+                left: '25px',
+                right: '25px',
+                bottom: '33px'
+              }}
+              className="corners"
+            >
+              <Corners tl br />
+            </div>
             <img src={vidImage} alt="" style={{ width: '100%', height: '100%' }} />
           </div>
         </Grid>

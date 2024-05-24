@@ -1,12 +1,5 @@
 .page.games {
   .header {
-    & > div {
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      padding-top: 70px;
-    }
-
     .header-image, .content {
       padding-left: 50px;
       padding-right: 50px;
@@ -41,13 +34,6 @@
       border-left-style: none;
       backdrop-filter: blur(10px);
     }
-    & > div {
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      padding-top: 70px;
-    }
-
   }
   @media screen and (max-width: 1280px) {
 
