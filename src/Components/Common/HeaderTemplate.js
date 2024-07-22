@@ -26,7 +26,7 @@ const heroZoom = keyframes`
   }
 `;
 
-const HeaderTemplate = ({ children, backgroundImage, slides, nav, marqueeContent }) => {
+const HeaderTemplate = ({ children, video, backgroundImage, slides, nav, marqueeContent }) => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -58,8 +58,29 @@ const HeaderTemplate = ({ children, backgroundImage, slides, nav, marqueeContent
           overflow: 'hidden'
         }}
       >
+        {video ?
+        <>
+       <div style={{position: 'absolute', top: 0, left: 0, zIndex: -1, width: '100%', height: '100%', background: 'rgba(0, 0, 0, 0.5)'}} /> 
+       <video
+        autoPlay
+        muted
+        loop
+        id="myVideo"
+        style={{
+          minWidth: '100%',
+          minHeight: '100%',
+          position: 'absolute',
+          right: 0,
+          top: 0,
+          opacity: 1,
+          zIndex: -2
+        }}
+      >
+        <source src={video} type="video/mp4" />
+      </video>
+      </>
+ : 
         <Box
-          id="cursor-movement-bg"
           sx={{
             backgroundImage: `url("${slides ? slides[index].background : backgroundImage}")`,
             backgroundSize: 'cover',
@@ -80,6 +101,7 @@ const HeaderTemplate = ({ children, backgroundImage, slides, nav, marqueeContent
                 : {})()
           }}
         />
+}
         {nav}
         {children}
         {slides ? (
@@ -148,6 +170,7 @@ HeaderTemplate.propTypes = {
   nav: PropTypes.any,
   backgroundImage: PropTypes.any,
   slides: PropTypes.array,
-  marqueeContent: PropTypes.any
+  marqueeContent: PropTypes.any,
+  video: PropTypes.any,
 };
 export default HeaderTemplate;

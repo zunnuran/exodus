@@ -7,6 +7,7 @@ import nftHeader from '../../assets/images/nft-header-bg.png';
 import nftsIcon from '../../assets/images/nft-logo.svg';
 import navAfter from '../../assets/images/nav-about-after.svg';
 import navBefore from '../../assets/images/nav-about-before.svg';
+import headerVid from '../../assets/videos/nft-card-animation.mp4';
 import './header.scss';
 import HeaderTemplate from '../Common/HeaderTemplate';
 import { fadeInUp } from '../../utils';
@@ -15,6 +16,7 @@ function Header() {
   return (
     <HeaderTemplate
       backgroundImage={nftHeader}
+      video={headerVid}
       nav={
         <Nav
           selected="NFT"

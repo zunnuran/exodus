@@ -1,5 +1,7 @@
 .page.nft {
   .nft-list {
+    max-width: 100%;
+    overflow: hidden;
     background: linear-gradient(rgba(0, 114, 255, 0.9), #00000000, #00000000, #00000000, rgba(0, 114, 255, 0.9)),
     url('../../assets/images/nft-text-back.png') no-repeat center center;;
     padding: 50px 100px;
